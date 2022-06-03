@@ -9,6 +9,9 @@ def nextPressed():
     global index
     pass
 
+def submitPressed():
+    pass
+
 questionList = []
 question1 = "Select the word that means an object from some class."
 question2 = "Variables that are used to describe data of objects are called _______________."
@@ -27,6 +30,7 @@ index = 0
 app = App(title="Quiz App", height = 800, width = 1200)
 picture = Picture(app, image = ImageList[0])
 question = Text(app, text = questionList[0])
+submitButton = PushButton(app, text = "Submit Answer", command = submitPressed)
 nextButton = PushButton(app, text = "Next Question", command = nextPressed)
 shuffleChoices()
 answerChoices = ButtonGroup(app, options = choicesList[0], selected = None)
